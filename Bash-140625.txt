@@ -1,0 +1,117 @@
+
+
+#!/bin/bash
+read -p "Enter a string: " input
+
+if [[ "$input" =~ ^[A-Za-z0-9]+$ ]]; then I'
+  echo "✅ Valid: Only letters and numbers"
+else
+  echo "❌ Invalid: Contains non-alphanumeric characters"
+fi
+
+
+
+
+Start of Regex: ^
+End of Regex: $
+abc: [abc] -> implies only lowerCase
+not ABC: ^[abc]
+any digit (0-9): [0-9]
+Any Letters: [a-zA-Z] -> Any letter / case
+{*} :  n number of time, n is not defined
+{n} : n-1,2,19.... { exactly to that number of 
+
+
+-- - -- - - - -- - -- - -- ARRAY Bash -- - -- - - -- ------- - -- -------------- 
+
+#!/bin/bash
+
+# creating an array
+
+fruits=("apple","mango","cherry")
+
+# access elements in fruits-array
+
+echo "First Fruit: ${fruits[0]}"
+
+# loop through an array
+
+for fruit in "${fruits[@]}"; do
+        echo "Fruit: $fruit"
+done
+
+# length of array
+
+echo "length of array: ${#fruits[@]}"
+
+
+
+
+
+---- -- -- - - -- - -code for  Associative array -- - - - - - - -- - - -
+
+#!/bin/bash
+
+
+# initlisation of associative array with the name as Capitals 
+
+declare -A capitals
+
+# filling up the A array
+
+capitals[India]="New Delhi"
+capitals[France]="Paris"
+capital[Japan]="Tokyo"
+
+# print the elements by key
+
+echo "Capital of France: ${capitals[France]}"
+
+# number of elements:
+
+echo "Total countries: ${#capitals[@]}"
+
+
+-- -- - -- - - -- --- - --- Funciton Code - -- - - ------
+
+# function -> this is a keyword
+# say_hello -> this is the function Name
+# we can also use Directly without Invoking function keyWord 
+
+#approach1
+
+function say_hello { 
+        echo "hello"
+}
+
+say_hello
+
+# Approach 2
+
+say_hello() {
+  echo "Hello!"
+}
+
+-- -- - -- - - -- --- - --- Function with Arguments Code - -- - - ------
+
+
+greet_user () {
+
+        echo "hello $1"
+}
+
+greet_user "Little Marry"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
